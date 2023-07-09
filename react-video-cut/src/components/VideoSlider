@@ -1,0 +1,15 @@
+import React from 'react';
+import Slider from '@mui/material/Slider';
+
+const VideoSlider = ({ value, max, onChange }) => (
+  <Slider
+    value={value}
+    max={max}
+    onChange={onChange}
+    valueLabelDisplay="auto"
+    getAriaValueText={(value) => `${Math.floor(value / 60)}:${(value % 60).toLocaleString(undefined, { minimumIntegerDigits: 2 })}`}
+    valueLabelFormat={(value) => `${Math.floor(value / 60)}:${(value % 60).toLocaleString(undefined, { minimumIntegerDigits: 2 })}`}
+  />
+);
+
+export default VideoSlider;
